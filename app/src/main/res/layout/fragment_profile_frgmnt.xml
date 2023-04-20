@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#E6E5E5"
+    android:layout_height="match_parent"
+    android:id="@+id/profile1"
+    tools:context=".profile_frgmnt">
+
+    <ImageView
+        android:id="@+id/imgback"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar" />
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/imgback"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-69dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/prf"
+        app:riv_border_color="@color/white"
+        app:riv_border_width="3dp"
+        app:riv_corner_radius="20dp" />
+    <!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:id="@+id/circleImageView"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:src="@drawable/profdemo"-->
+<!--        app:civ_border_overlay="true"-->
+<!--        app:civ_border_width="2dp"-->
+<!--        android:clickable="true"-->
+<!--        android:elevation="100dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.074" />-->
+<!--    <com.makeramen.roundedimageview.RoundedImageView-->
+<!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--        android:id="@+id/imageView1"-->
+<!--        android:src="@drawable/photo1"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        app:riv_corner_radius="30dip"-->
+<!--        app:riv_border_width="2dip"-->
+<!--        app:riv_border_color="#333333"-->
+<!--        app:riv_mutate_background="true"-->
+<!--        app:riv_tile_mode="repeat"-->
+<!--        app:riv_oval="true"-->
+<!--        android:layout_height="wrap_content" -->
+<!--        android:layout_width="wrap_content"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+
+<!--    <com.makeramen.roundedimageview.RoundedImageView-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:background="@color/white"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/prf"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.216"-->
+<!--        app:riv_border_width="2dip"-->
+<!--        app:riv_corner_radius="20dip" />-->
+
+    <TextView
+        android:id="@+id/idname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="132dp"
+        android:text="Shreyansh Bariya"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_below="@+id/img2"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/idmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img2"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+
+        android:text="demo mail"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/idnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginLeft="50dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="370dp"
+        android:text="number"/>
+<!--    <TextView-->
+<!--        android:id="@+id/idpass"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:password="true"-->
+<!--        android:text="avjjkdgaksdfkvf"-->
+<!--        android:textSize="20dp"-->
+<!--        android:layout_marginTop="405dp"-->
+<!--        android:layout_marginLeft="50dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        tools:ignore="Deprecated" />-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="659dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="21dp"
+        android:backgroundTint="#AAB4F6"
+        android:drawableRight="@drawable/logout1"
+        android:elevation="10dp"
+        android:paddingRight="15dp"
+        android:text="Log Out"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.842" />
+
+    <!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/avatar"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0">-->
+<!--        -->
+<!--    </ImageView>-->
+
+</RelativeLayout>

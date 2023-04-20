@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="HOME"
+        android:icon="@drawable/ontabchange"
+        app:cnb_iconColor="#000000" />
+    <item
+        android:id="@+id/add"
+        android:title="ADD_CONTENT"
+        android:icon="@drawable/add_photox"
+        app:cnb_iconColor="#000000"/>
+    <item
+        android:id="@+id/chat"
+        android:title="CHATS"
+        android:icon="@drawable/chatx"
+        app:cnb_iconColor="#000000"/>
+    <item
+         android:id="@+id/profile"
+        android:title="PROFILE"
+        android:icon="@drawable/personx"
+        app:cnb_iconColor="#000000"/>
+
+</menu>

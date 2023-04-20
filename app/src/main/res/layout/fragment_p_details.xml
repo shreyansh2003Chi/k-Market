@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".p_details">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        app:strokeWidth="2dp"
+        app:strokeColor="#4F17D5"
+        android:clickable="true"
+        android:backgroundTint="#D7FBF8"
+        android:layout_width="300dp"
+        app:cardCornerRadius="20dp"
+        android:layout_height="350dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.178"
+        tools:ignore="MissingConstraints"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:elevation="33dp"
+        android:elegantTextHeight="true"
+        android:text="BUY"
+        app:elevation="30dp"
+        app:strokeColor="#0324FB"
+        android:textColor="#0324FB"
+        android:textSize="18dp"
+        app:backgroundTint="#94A2FB"
+        app:cornerRadius="30dp"
+        app:strokeWidth="3dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:text="CART"
+        android:textSize="18dp"
+        app:strokeColor="#F83E04"
+        android:textColor="#F83E04"
+        app:strokeWidth="3dp"
+        app:cornerRadius="30dp"
+        app:backgroundTint="#FFB29A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
