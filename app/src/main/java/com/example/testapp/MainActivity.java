@@ -1,7 +1,9 @@
 package com.example.testapp;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     FirebaseDatabase firedata;
     TextView lgntv;
     ProgressBar pb;
+    Dialog d;
 
     @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         signup=findViewById(R.id.btn_signup);
         pb=findViewById(R.id.pb1);
         pb.setVisibility(View.GONE);
+        d=new Dialog(MainActivity.this);
+        d.setContentView(R.layout.dialog_loading);
         signup.setOnClickListener(this);
         signup.setOnLongClickListener(this);
     }
@@ -64,6 +69,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        if(d.getWindow()!=null)
+        {
+            d.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+        }
+        d.show();
         performAuth();
     }
 
@@ -138,6 +148,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                                 Intent ti=new Intent(MainActivity.this,loginpage.class);
                                                 startActivity(ti);
                                                 finish();
+                                                d.dismiss();
                                             }
                                             else
                                             {

@@ -19,5 +19,8 @@
         <item name="cornerSize">15%</item>
 
     </style>
+    <style name="progress">
+        <item name="colorSecondary">#F372A5</item>
+    </style>
 
 </resources>
