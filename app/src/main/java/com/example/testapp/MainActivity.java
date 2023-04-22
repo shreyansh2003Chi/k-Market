@@ -69,11 +69,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if(d.getWindow()!=null)
-        {
-            d.getWindow().setBackgroundDrawable(new ColorDrawable(0));
-        }
-        d.show();
         performAuth();
     }
 
@@ -125,6 +120,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 //        pb.setVisibility(View.VISIBLE);
+        if(d.getWindow()!=null)
+        {
+            d.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+        }
+        d.show();
 
         auth.createUserWithEmailAndPassword(e_mail,pass)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {

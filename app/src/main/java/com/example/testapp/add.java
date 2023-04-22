@@ -13,6 +13,7 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -62,6 +63,7 @@ public class add extends Fragment {
     ArrayAdapter<String> adapter;
     ProgressBar b;
     CircleImageView pick;
+    Dialog d;
 
     TextInputLayout catagories;
     TextInputLayout title;
@@ -135,12 +137,18 @@ public class add extends Fragment {
         autoCompleteTextView.setAdapter(adapter);
         b=view.findViewById(id.progressBar);
         b.setVisibility(View.GONE);
-
+        d=new Dialog(getContext());
+        d.setContentView(R.layout.dialog_loading);
         pick=view.findViewById(imagepick);
         pick.setOnClickListener(V -> getcontent.launch("image/*") );
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(d.getWindow()!=null)
+                {
+                    d.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+                }
+                d.show();
                 uploadToFirebase();
             }
         });
@@ -189,6 +197,7 @@ public class add extends Fragment {
                                 price.getEditText().setText("");
 //                                pick.setImageResource(R.drawable.ic_baseline_add_photo_alternate_24);
                                 Toast.makeText(getContext(),"added",Toast.LENGTH_LONG).show();
+                                d.dismiss();
                             }
                         });
                     }
