@@ -1,8 +1,12 @@
 package com.example.testapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,11 +59,22 @@ public class p_details extends Fragment {
         }
     }
 
+    CardView c;         // creating object of that source where we are clicked
+    tempfrg t;          // creating reference of fragment we are going to switch
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
        View v=inflater.inflate(R.layout.fragment_p_details, container, false);
+       t=new tempfrg();
+       c=v.findViewById(R.id.materialCardView);       // typecasting our click source
+       c.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
+               ft.replace(R.id.frm_layout,t).commit();
+           }
+       });
        return v;
     }
 }
