@@ -72,7 +72,7 @@ public class MyAdapter extends FirebaseRecyclerAdapter<ModelRec,MyAdapter.myView
                 public myViewholder(@NonNull View itemView) {
                     super(itemView);
 //                    r=itemView.findViewById(R.id.recView);
-                    s=itemView.findViewById(R.id.shimmer);
+//                    s=itemView.findViewById(R.id.shimmer);
 
                    img=itemView.findViewById(R.id.img1);
                     title=itemView.findViewById(R.id.rectxt1);

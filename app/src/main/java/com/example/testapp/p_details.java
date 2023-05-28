@@ -1,5 +1,6 @@
 package com.example.testapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -11,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,21 +62,41 @@ public class p_details extends Fragment {
     }
 
     CardView c;         // creating object of that source where we are clicked
-    tempfrg t;          // creating reference of fragment we are going to switch
+    tempfrg t;
+    Button b1,b2;// creating reference of fragment we are going to switch
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
        View v=inflater.inflate(R.layout.fragment_p_details, container, false);
        t=new tempfrg();
-       c=v.findViewById(R.id.materialCardView);       // typecasting our click source
-       c.setOnClickListener(new View.OnClickListener() {
+       b2=v.findViewById(R.id.cartbtn);
+       b1=v.findViewById(R.id.buy);
+       c=v.findViewById(R.id.materialCardView);
+       b1.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
                FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
                ft.replace(R.id.frm_layout,t).commit();
            }
        });
+       tempfrg tmf=new tempfrg();
+       c.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               FragmentTransaction ft1=getActivity().getSupportFragmentManager().beginTransaction();
+               ft1.replace(R.id.frm_layout,tmf).commit();
+           }
+       });
+//       c=v.findViewById(R.id.materialCardView);       // typecasting our click source
+//       c.setOnClickListener(new View.OnClickListener() {
+//           @Override
+//           public void onClick(View view) {
+//               FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
+//               ft.replace(R.id.frm_layout,t).commit();
+//           }
+//       });
        return v;
     }
 }

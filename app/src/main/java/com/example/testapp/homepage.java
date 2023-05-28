@@ -20,6 +20,8 @@ public class homepage extends AppCompatActivity implements ChipNavigationBar.OnI
       chat chats=new chat();
       p_details pdetails=new p_details();
       ChipNavigationBar cnb;
+      delete ty=new delete();
+      tempfrg tmp=new tempfrg();
       profile_frgmnt profile=new profile_frgmnt();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +62,7 @@ public class homepage extends AppCompatActivity implements ChipNavigationBar.OnI
                 getSupportFragmentManager().beginTransaction().replace(R.id.frm_layout,add).commit();
                 break;
             case R.id.chat:
-                getSupportFragmentManager().beginTransaction().replace(R.id.frm_layout,pdetails).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frm_layout,tmp).commit();
                 break;
             case R.id.profile:
                 getSupportFragmentManager().beginTransaction().replace(R.id.frm_layout,profile).commit();

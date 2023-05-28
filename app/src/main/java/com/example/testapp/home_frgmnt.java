@@ -24,7 +24,7 @@ public class home_frgmnt extends Fragment {
     RecyclerView rv;
     MyAdapter myadapter;
     SearchView search;
-    ShimmerFrameLayout shimmer;
+//    ShimmerFrameLayout shimmer;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -71,9 +71,9 @@ public class home_frgmnt extends Fragment {
                              Bundle savedInstanceState) {
 //         Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_home_frgmnt, container, false);
-        shimmer=view.findViewById(R.id.shimmer);
-        shimmer.setVisibility(View.VISIBLE);
-        shimmer.startShimmerAnimation();
+//        shimmer=view.findViewById(R.id.shimmer);
+//        shimmer.setVisibility(View.VISIBLE);
+//        shimmer.startShimmerAnimation();
         search=view.findViewById(R.id.searchView);
         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -97,8 +97,8 @@ public class home_frgmnt extends Fragment {
                         .build();
         myadapter=new MyAdapter(options);
         rv.setAdapter(myadapter);
-         shimmer.stopShimmerAnimation();
-         shimmer.setVisibility(View.GONE);
+//         shimmer.stopShimmerAnimation();
+//         shimmer.setVisibility(View.GONE);
         return view;
     }
 

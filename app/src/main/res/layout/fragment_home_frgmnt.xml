@@ -7,50 +7,588 @@
     android:id="@+id/home1"
     android:orientation="vertical"
     tools:context=".home_frgmnt">
-   <com.facebook.shimmer.ShimmerFrameLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:id="@+id/shimmer"
-       android:layout_marginTop="60dp"
-       tools:ignore="MissingConstraints">
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:orientation="vertical">
-           <include layout="@layout/shimmer_rec">
 
-           </include>
-           <include layout="@layout/shimmer_rec">
+    <!--   <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:layout_height="match_parent"-->
+<!--       android:id="@+id/shimmer"-->
+<!--       android:layout_marginTop="60dp"-->
+<!--       tools:ignore="MissingConstraints">-->
+<!--       <LinearLayout-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:orientation="vertical">-->
+<!--           <include layout="@layout/shimmer_rec">-->
 
-           </include>
-           <include layout="@layout/shimmer_rec">
+<!--           </include>-->
+<!--           <include layout="@layout/shimmer_rec">-->
 
-           </include>
-           <include layout="@layout/shimmer_rec">
+<!--           </include>-->
+<!--           <include layout="@layout/shimmer_rec">-->
 
-           </include>
-           <include layout="@layout/shimmer_rec">
+<!--           </include>-->
+<!--           <include layout="@layout/shimmer_rec">-->
 
-           </include>
-           <include layout="@layout/shimmer_rec">
+<!--           </include>-->
+<!--           <include layout="@layout/shimmer_rec">-->
 
-           </include>
-           <include layout="@layout/shimmer_rec">
+<!--           </include>-->
+<!--           <include layout="@layout/shimmer_rec">-->
 
-           </include>
-           <include layout="@layout/shimmer_rec">
+<!--           </include>-->
+<!--           <include layout="@layout/shimmer_rec">-->
 
-           </include>
-       </LinearLayout>
+<!--           </include>-->
+<!--           <include layout="@layout/shimmer_rec">-->
 
-   </com.facebook.shimmer.ShimmerFrameLayout>
+<!--           </include>-->
+<!--       </LinearLayout>-->
+
+<!--   </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/recView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintVertical_bias="0.094"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="130dp"
+                android:layout_height="170dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="#F4F2FA"
+                android:layout_margin="12dp"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="15dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="130dp"
+                    android:layout_height="170dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="130dp"
+                        android:layout_height="170dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:elevation="20dp"
+                            android:src="@drawable/profdemo"
+                            app:civ_border_color="@color/black"
+                            app:civ_border_width="1dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.084" />
+
+                        <TextView
+                            android:id="@+id/rectxt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Product Name "
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.504"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/rectxt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="price : 2000 rs"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.476"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.624" />
+
+                        <!--            <Button-->
+                        <!--                android:id="@+id/button2"-->
+                        <!--                android:layout_width="wrap_content"-->
+                        <!--                android:layout_height="30dp"-->
+                        <!--                android:background="@drawable/btn_12"-->
+                        <!--                android:text="Buy"-->
+                        <!--                android:textColor="#EDE2E2"-->
+                        <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+                        <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--                app:layout_constraintHorizontal_bias="0.464"-->
+                        <!--                app:layout_constraintStart_toStartOf="parent"-->
+                        <!--                app:layout_constraintTop_toTopOf="parent"-->
+                        <!--                app:layout_constraintVertical_bias="0.933" />-->
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:backgroundTint="#3D57FD"
+                            android:elevation="10dp"
+                            android:text="BUY"
+                            app:cornerRadius="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.93" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="130dp"
+                android:layout_height="170dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:clickable="true"
+                app:cardBackgroundColor="#E7F0FA"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="15dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="130dp"
+                    android:layout_height="170dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:elevation="20dp"
+                        android:src="@drawable/profdemo"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.084" />
+
+                    <TextView
+                        android:id="@+id/rectxt21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Name "
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.504"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/rectxt22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="price : 2000 rs"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.476"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.624" />
+
+                    <!--            <Button-->
+                    <!--                android:id="@+id/button2"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="30dp"-->
+                    <!--                android:background="@drawable/btn_12"-->
+                    <!--                android:text="Buy"-->
+                    <!--                android:textColor="#EDE2E2"-->
+                    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintHorizontal_bias="0.464"-->
+                    <!--                app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                app:layout_constraintVertical_bias="0.933" />-->
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:backgroundTint="#3D57FD"
+                        android:elevation="10dp"
+                        android:text="BUY"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.93" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="130dp"
+                android:layout_height="170dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                app:cardBackgroundColor="#F4F2FA"
+                android:clickable="true"
+
+                app:cardCornerRadius="10dp"
+                app:cardElevation="15dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="130dp"
+                    android:layout_height="170dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img3"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:elevation="20dp"
+                        android:src="@drawable/profdemo"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.084" />
+
+                    <TextView
+                        android:id="@+id/rectxt31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Name "
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.504"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/rectxt32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="price : 2000 rs"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.476"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.624" />
+
+                    <!--            <Button-->
+                    <!--                android:id="@+id/button2"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="30dp"-->
+                    <!--                android:background="@drawable/btn_12"-->
+                    <!--                android:text="Buy"-->
+                    <!--                android:textColor="#EDE2E2"-->
+                    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintHorizontal_bias="0.464"-->
+                    <!--                app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                app:layout_constraintVertical_bias="0.933" />-->
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:backgroundTint="#3D57FD"
+                        android:elevation="10dp"
+                        android:text="BUY"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.93" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="130dp"
+                android:layout_height="170dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:clickable="true"
+                app:cardBackgroundColor="#E7F0FA"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="15dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="130dp"
+                    android:layout_height="170dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img4"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:elevation="20dp"
+                        android:src="@drawable/profdemo"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.084" />
+
+                    <TextView
+                        android:id="@+id/rectxt41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Name "
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.504"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/rectxt42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="price : 2000 rs"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.476"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.624" />
+
+                    <!--            <Button-->
+                    <!--                android:id="@+id/button2"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="30dp"-->
+                    <!--                android:background="@drawable/btn_12"-->
+                    <!--                android:text="Buy"-->
+                    <!--                android:textColor="#EDE2E2"-->
+                    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintHorizontal_bias="0.464"-->
+                    <!--                app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                app:layout_constraintVertical_bias="0.933" />-->
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:backgroundTint="#3D57FD"
+                        android:elevation="10dp"
+                        android:text="BUY"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.93" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="130dp"
+                android:layout_height="170dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="#F4F2FA"
+                app:cardElevation="15dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="130dp"
+                    android:layout_height="170dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img5"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:elevation="20dp"
+                        android:src="@drawable/profdemo"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.084" />
+
+                    <TextView
+                        android:id="@+id/rectxt51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Name "
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.504"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/rectxt52"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="price : 2000 rs"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.476"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.624" />
+
+                    <!--            <Button-->
+                    <!--                android:id="@+id/button2"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="30dp"-->
+                    <!--                android:background="@drawable/btn_12"-->
+                    <!--                android:text="Buy"-->
+                    <!--                android:textColor="#EDE2E2"-->
+                    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintHorizontal_bias="0.464"-->
+                    <!--                app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                app:layout_constraintVertical_bias="0.933" />-->
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:backgroundTint="#3D57FD"
+                        android:elevation="10dp"
+                        android:text="BUY"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.93" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="130dp"
+                android:layout_height="170dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="#E7F0FA"
+                android:layout_margin="12dp"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="15dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="130dp"
+                    android:layout_height="170dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img6"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:elevation="20dp"
+                        android:src="@drawable/profdemo"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.084" />
+
+                    <TextView
+                        android:id="@+id/rectxt61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Name "
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.504"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/rectxt62"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="price : 2000 rs"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.476"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.624" />
+
+                    <!--            <Button-->
+                    <!--                android:id="@+id/button2"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="30dp"-->
+                    <!--                android:background="@drawable/btn_12"-->
+                    <!--                android:text="Buy"-->
+                    <!--                android:textColor="#EDE2E2"-->
+                    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintHorizontal_bias="0.464"-->
+                    <!--                app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                app:layout_constraintVertical_bias="0.933" />-->
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:backgroundTint="#3D57FD"
+                        android:elevation="10dp"
+                        android:text="BUY"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.93" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recView"
         style="@style/Widget.CarUi.CarUiRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="270dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

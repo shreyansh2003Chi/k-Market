@@ -26,6 +26,7 @@
 
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/buy"
         android:layout_width="160dp"
         android:layout_height="70dp"
         android:elevation="33dp"
@@ -36,7 +37,7 @@
         android:textColor="#0324FB"
         android:textSize="18dp"
         app:backgroundTint="#94A2FB"
-        app:cornerRadius="30dp"
+        app:cornerRadius="15dp"
         app:strokeWidth="3dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,6 +48,7 @@
         app:layout_constraintVertical_bias="0.961" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/cartbtn"
         android:layout_width="160dp"
         android:layout_height="70dp"
         android:text="CART"
@@ -54,7 +56,7 @@
         app:strokeColor="#F83E04"
         android:textColor="#F83E04"
         app:strokeWidth="3dp"
-        app:cornerRadius="30dp"
+        app:cornerRadius="15dp"
         app:backgroundTint="#FFB29A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
