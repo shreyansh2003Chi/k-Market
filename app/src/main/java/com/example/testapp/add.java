@@ -48,6 +48,9 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 //import com.theartofdev.edmodo.cropper.CropImage;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 import java.util.Random;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -70,6 +73,7 @@ public class add extends Fragment {
     TextInputLayout price;
     Uri result1;
     Button btnadd;
+    Calendar calendar = Calendar.getInstance();
     //    ActivityMainBinding binding;
 //    final int SELECT_IMAGE_CODE=1;
 //    ActivityResultLauncher<String> tkPhoto;
@@ -173,7 +177,8 @@ public class add extends Fragment {
 //        d=new Dialog(getContext());
 //        d.setTitle("adding.....");
 //        d.show();
-
+        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
+        String currentTime = dateFormat.format(calendar.getTime());
         FirebaseDatabase db=FirebaseDatabase.getInstance();
         DatabaseReference root=db.getReference();
         FirebaseStorage storage=FirebaseStorage.getInstance();
@@ -188,7 +193,7 @@ public class add extends Fragment {
                                 b.setVisibility(View.GONE);
                                 FirebaseDatabase db1=FirebaseDatabase.getInstance();
                                 DatabaseReference root=db.getReference("Products");
-                                DataHolder obj=new DataHolder(catagories.getEditText().getText().toString(),title.getEditText().getText().toString(),price.getEditText().getText().toString(),uri.toString());
+                                DataHolder obj=new DataHolder(catagories.getEditText().getText().toString(),title.getEditText().getText().toString(),price.getEditText().getText().toString(),uri.toString(),currentTime);
                                 root.child(title.getEditText().getText().toString()).setValue(obj);
 
 //                               catagories.getEditText().setHint("Select Catagory");

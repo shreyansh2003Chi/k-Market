@@ -107,6 +107,7 @@ public class home_frgmnt extends Fragment {
                 new FirebaseRecyclerOptions.Builder<ModelRec>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Products").orderByChild("title").startAt(text).endAt(text+"\uf8ff"), ModelRec.class)
                         .build();
+
         myadapter=new MyAdapter(options);
         myadapter.startListening();
         rv.setAdapter(myadapter);

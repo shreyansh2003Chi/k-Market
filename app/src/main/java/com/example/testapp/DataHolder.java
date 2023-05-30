@@ -1,13 +1,14 @@
 package com.example.testapp;
 
 public class DataHolder {
-    String catagories,title,price,pimage;
+    String catagories,title,price,pimage,currentTime;
 
-    public DataHolder(String catagories, String title, String price, String pimage) {
+    public DataHolder(String catagories, String title, String price, String pimage, String currentTime) {
         this.catagories = catagories;
         this.title = title;
         this.price = price;
         this.pimage = pimage;
+        this.currentTime=currentTime;
     }
 
     public String getCatagories() {
@@ -40,5 +41,13 @@ public class DataHolder {
 
     public void setPimage(String pimage) {
         this.pimage = pimage;
+    }
+
+    public String getCurrentTime() {
+        return currentTime;
+    }
+
+    public void setCurrentTime(String currentTime) {
+        this.currentTime = currentTime;
     }
 }
