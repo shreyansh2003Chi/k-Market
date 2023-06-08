@@ -78,10 +78,10 @@ public class add extends Fragment {
 //    final int SELECT_IMAGE_CODE=1;
 //    ActivityResultLauncher<String> tkPhoto;
 
-    public static final int CAMARA_REQUEST = 100;
-    public static final int STORAGE_REQUEST = 101;
-    String camaraPermission[];
-    String storagePermission[];
+//    public static final int CAMARA_REQUEST = 100;
+////    public static final int STORAGE_REQUEST = 101;
+//    String camaraPermission[];
+//    String storagePermission[];
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -122,9 +122,6 @@ public class add extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
-    ShapeableImageView image;
-
     @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

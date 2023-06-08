@@ -22,30 +22,11 @@ import java.util.Locale;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MyAdapter extends FirebaseRecyclerAdapter<ModelRec,MyAdapter.myViewholder>{
-    boolean change=true;
-    boolean isLoading=false;
-//    Calendar calendar = Calendar.getInstance();
-//    SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
-//    String currentTime = dateFormat.format(calendar.getTime());
-
-// Print or use the current time as needed
     public MyAdapter(@NonNull FirebaseRecyclerOptions<ModelRec> options) {
         super(options);
     }
     @Override
     protected void onBindViewHolder(@NonNull myViewholder holder, int position, @NonNull ModelRec model) {
-//        if(isLoading)
-//        {
-//            holder.s.startShimmerAnimation();
-//            holder.s.setVisibility(View.VISIBLE);
-//            holder.itemView.setVisibility(View.GONE);
-//        }
-//        else
-//        {
-//            holder.s.stopShimmerAnimation();
-//            holder.s.setVisibility(View.GONE);
-//            holder.itemView.setVisibility(View.VISIBLE);
-//        }
         Glide.with(holder.img.getContext()).load(model.getPimage()).into(holder.img);
         holder.title.setText(model.getTitle());
         holder.price.setText(model.getPrice());
@@ -56,28 +37,20 @@ public class MyAdapter extends FirebaseRecyclerAdapter<ModelRec,MyAdapter.myView
     @NonNull
     @Override
     public myViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        return null;
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.row_ui,parent,false);    // view convert row_ui to view
         return new myViewholder(view);
-
-
 
     }
 
     class myViewholder extends RecyclerView.ViewHolder
     {
         CircleImageView img;
-////        RoundedImageView img;
-//        CircleImageView img;
         TextView title,price,time;
         CardView card;
         ShimmerFrameLayout s;
-//        RecyclerView r;
+
                 public myViewholder(@NonNull View itemView) {
                     super(itemView);
-//                    r=itemView.findViewById(R.id.recView);
-//                    s=itemView.findViewById(R.id.shimmer);
-
                    img=itemView.findViewById(R.id.img1);
                     title=itemView.findViewById(R.id.rectxt1);
                     price=itemView.findViewById(R.id.rectxt2);
