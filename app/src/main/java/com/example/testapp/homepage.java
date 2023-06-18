@@ -23,6 +23,7 @@ public class homepage extends AppCompatActivity implements ChipNavigationBar.OnI
       delete ty=new delete();
       tempfrg tmp=new tempfrg();
       profile_frgmnt profile=new profile_frgmnt();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

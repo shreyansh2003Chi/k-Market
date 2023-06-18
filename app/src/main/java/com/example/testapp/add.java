@@ -170,7 +170,7 @@ public class add extends Fragment {
                 }
             });
     private void uploadToFirebase() {
-          b.setVisibility(View.VISIBLE);
+          b.setVisibility(View.GONE);
 //        d=new Dialog(getContext());
 //        d.setTitle("adding.....");
 //        d.show();
