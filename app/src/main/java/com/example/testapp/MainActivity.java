@@ -34,19 +34,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView lgntv;
     ProgressBar pb;
     Dialog d;
-
     @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         auth=FirebaseAuth.getInstance();
         firedata=FirebaseDatabase.getInstance();
-
-//        if(auth.getCurrentUser()!=null)
-//        {
-//            finish();
-//            return;
-//        }
         lgntv=(TextView)findViewById(R.id.tv);
         name1=findViewById(R.id.name);
         mobno1=findViewById(R.id.mobno);

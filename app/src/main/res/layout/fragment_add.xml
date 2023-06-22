@@ -4,98 +4,131 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#66E0FAF7"
+    android:background="#66D1F6F2"
     tools:context=".add">
+
+    <!--    </de.hdodenhof.circleimageview.CircleImageView>-->
+    <!--    <com.makeramen.roundedimageview.RoundedImageView-->
+    <!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--        android:id="@+id/imageView1"-->
+    <!--        android:src="@drawable/photo1"-->
+    <!--        android:scaleType="fitCenter"-->
+    <!--        app:riv_corner_radius="30dip"-->
+    <!--        app:riv_border_width="2dip"-->
+    <!--        app:riv_border_color="#333333"-->
+    <!--        app:riv_mutate_background="true"-->
+    <!--        app:riv_tile_mode="repeat"
+-->
+    <!--        app:riv_oval="true"  android:layout_height="200dp"/>-->
+    <!--    <com.makeramen.roundedimageview.RoundedImageView-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:id="@+id/imagepick"-->
+    <!--        app:riv_corner_radius="30dip"-->
+    <!--        android:scaleType="fitCenter"-->
+    <!--        app:riv_border_color="#333333"-->
+    <!--        app:riv_tile_mode="repeat"-->
+    <!--        tools:ignore="MissingConstraints"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.411"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--         app:layout_constraintVertical_bias="0.196"-->
+    <!--            >-->
+
+
+    <!--    <com.google.android.material.imageview.ShapeableImageView-->
+    <!--        android:id="@+id/imagepick"-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="200dp"-->
+    <!--        android:clickable="true"-->
+    <!--        android:keyboardNavigationCluster="true"-->
+    <!--        android:padding="0dp"-->
+    <!--        android:src="@drawable/ic_baseline_add_photo_alternate_24"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.445"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.177"-->
+    <!--        app:shapeAppearanceOverlay="@style/roundedcorner"-->
+    <!--        app:strokeColor="#45B7F4"-->
+    <!--        app:strokeWidth="4dp" />-->
+
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:id="@+id/imagepick"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:clickable="true"-->
+<!--        android:contentDescription="@string/app_name"-->
+<!--        android:src="@drawable/ic_baseline_add_photo_alternate_24"-->
+<!--        app:civ_border_color="#FF000000"-->
+<!--        app:civ_border_width="2dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.118"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.168">-->
+
+<!--    </de.hdodenhof.circleimageview.CircleImageView>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginTop="-10dp"
+        android:backgroundTintMode="add"
+        android:backgroundTint="#D6E0EA"
+        android:background="@drawable/custom_edittext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/lable_ui"
-        android:drawableRight="@drawable/add_lable"
-        android:paddingLeft="2dp"
+        android:drawablePadding="20dp"
+        android:drawableRight="@drawable/cart111"
+        android:gravity="center"
+        android:paddingRight="30dp"
+        android:paddingLeft="30dp"
+
         android:paddingTop="5dp"
 
-        android:drawablePadding="20dp"
-        android:paddingRight="35dp"
         android:paddingBottom="5dp"
-        android:text="add Product"
-        android:textColor="@color/black"
+        android:text="Add Product"
+        android:textColor="@color/chat"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imagepick"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425">
-    </TextView>
+        app:layout_constraintVertical_bias="0.333"></TextView>
 
-    <!--    </de.hdodenhof.circleimageview.CircleImageView>-->
-<!--    <com.makeramen.roundedimageview.RoundedImageView-->
-<!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--        android:id="@+id/imageView1"-->
-<!--        android:src="@drawable/photo1"-->
-<!--        android:scaleType="fitCenter"-->
-<!--        app:riv_corner_radius="30dip"-->
-<!--        app:riv_border_width="2dip"-->
-<!--        app:riv_border_color="#333333"-->
-<!--        app:riv_mutate_background="true"-->
-<!--        app:riv_tile_mode="repeat"
--->
-<!--        app:riv_oval="true"  android:layout_height="200dp"/>-->
-<!--    <com.makeramen.roundedimageview.RoundedImageView-->
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="100dp"-->
-<!--        android:id="@+id/imagepick"-->
-<!--        app:riv_corner_radius="30dip"-->
-<!--        android:scaleType="fitCenter"-->
-<!--        app:riv_border_color="#333333"-->
-<!--        app:riv_tile_mode="repeat"-->
-<!--        tools:ignore="MissingConstraints"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.411"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--         app:layout_constraintVertical_bias="0.196"-->
-<!--            >-->
-
-
-<!--    <com.google.android.material.imageview.ShapeableImageView-->
-<!--        android:id="@+id/imagepick"-->
-<!--        android:layout_width="200dp"-->
-<!--        android:layout_height="200dp"-->
-<!--        android:clickable="true"-->
-<!--        android:keyboardNavigationCluster="true"-->
-<!--        android:padding="0dp"-->
-<!--        android:src="@drawable/ic_baseline_add_photo_alternate_24"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.445"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.177"-->
-<!--        app:shapeAppearanceOverlay="@style/roundedcorner"-->
-<!--        app:strokeColor="#45B7F4"-->
-<!--        app:strokeWidth="4dp" />-->
-
-    <de.hdodenhof.circleimageview.CircleImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/imagepick"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:clickable="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
         android:src="@drawable/ic_baseline_add_photo_alternate_24"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.168">
-
-    </de.hdodenhof.circleimageview.CircleImageView>
+        app:layout_constraintVertical_bias="0.168"
+        app:riv_border_color="@color/white"
+        app:riv_border_width="3dp"
+        app:riv_corner_radius="20dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -109,10 +142,10 @@
         app:boxStrokeWidth="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagepick"
-        app:layout_constraintVertical_bias="0.103">
+        app:layout_constraintVertical_bias="0.066">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="350dp"
@@ -192,23 +225,24 @@
             android:id="@+id/autocompletetextView"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:editable="false"
+            android:inputType="none"
             android:lines="1"
             android:singleLine="true"
-            android:editable="false"
-            android:inputType="none" />
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/addb"
-        android:layout_width="190dp"
+        android:layout_width="348dp"
         android:layout_height="65dp"
         android:layout_marginTop="40dp"
         android:backgroundTint="#B192FA"
         android:text="add"
         android:textColor="@color/black"
         android:textSize="22dp"
-        app:cornerRadius="20dp"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

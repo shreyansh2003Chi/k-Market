@@ -45,6 +45,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
 //import com.theartofdev.edmodo.cropper.CropImage;
 
@@ -65,7 +66,9 @@ public class add extends Fragment {
     AutoCompleteTextView autoCompleteTextView;
     ArrayAdapter<String> adapter;
     ProgressBar b;
-    CircleImageView pick;
+    private ActivityResultLauncher<String> getContentLauncher;
+//    CircleImageView pick;
+    RoundedImageView pick;
     Dialog d;
 
     TextInputLayout catagories;
@@ -142,6 +145,13 @@ public class add extends Fragment {
         d.setContentView(R.layout.dialog_loading);
         pick=view.findViewById(imagepick);
         pick.setOnClickListener(V -> getcontent.launch("image/*") );
+        getContentLauncher = registerForActivityResult(new ActivityResultContracts.GetContent(), result -> {
+            // Handle the result here
+            if (result != null) {
+                // Process the selected content
+            }
+        });
+
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -161,11 +171,13 @@ public class add extends Fragment {
                     ActivityResultContracts.GetContent(),
             new ActivityResultCallback<Uri>() {
                 @Override
+
                 public void onActivityResult(Uri result) {
                     if(result!=null)
                     {
                         pick.setImageURI(result);
                         result1=result;
+
                     }
                 }
             });
