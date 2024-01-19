@@ -61,10 +61,12 @@
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="150dp"
+        style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_height="50dp"
         android:backgroundTint="@color/home"
         android:text="Edit"
         app:cornerRadius="10dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    app:cardCornerRadius="20dp"
+    app:cardCornerRadius="10dp"
     android:id="@+id/card"
     android:layout_marginTop="10dp"
     android:layout_margin="1dp"
     android:clickable="true"
     app:cardElevation="10dp"
-    app:cardBackgroundColor="#F4F2FA"
+    app:cardBackgroundColor="#E3E7FD"
     android:layout_height="100dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +23,7 @@
             android:layout_centerVertical="true"
             android:elevation="10dp"
             android:src="@mipmap/ic_launcher"
-            app:civ_border_color="#FF000000"
+            app:civ_border_color="@color/black"
             app:civ_border_width="2dp"
             android:padding="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -86,7 +86,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.82"
-            android:background="#F4F2FA"
+            android:background="#E3E7FD"
             app:layout_constraintStart_toEndOf="@+id/rectxt2"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.483" />

@@ -13,7 +13,6 @@ import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 public class homepage extends AppCompatActivity implements ChipNavigationBar.OnItemSelectedListener {
 //     ActivityMainBinding binding;
-      BottomNavigationView nav;
       Menu mnu;
       home_frgmnt home=new home_frgmnt();
       add  add=new add();
@@ -34,17 +33,7 @@ public class homepage extends AppCompatActivity implements ChipNavigationBar.OnI
         cnb.setItemSelected(R.id.home,true);
         getSupportFragmentManager().beginTransaction().replace(R.id.frm_layout,home).commit();
     }
-    private void loadFragment(Fragment fragment) {
 
-        if(fragment!=null)
-        {
-            getSupportFragmentManager().beginTransaction().replace(R.id.frm_layout,fragment).commit();
-        }
-        else
-        {
-            Toast.makeText(homepage.this,"Fragment couldnt load",Toast.LENGTH_LONG).show();
-        }
-    }
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.tab_manu,menu);
@@ -70,5 +59,6 @@ public class homepage extends AppCompatActivity implements ChipNavigationBar.OnI
                 break;
 
         }
+
     }
 }

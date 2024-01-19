@@ -5,22 +5,22 @@
     <item
         android:id="@+id/home"
         android:title="HOME"
-        android:icon="@drawable/ontabchange"
+        android:icon="@drawable/home_selected"
         app:cnb_iconColor="#000000" />
     <item
         android:id="@+id/add"
         android:title="ADD_CONTENT"
-        android:icon="@drawable/add_photox"
+        android:icon="@drawable/cart0"
         app:cnb_iconColor="#000000"/>
     <item
         android:id="@+id/chat"
         android:title="CHATS"
-        android:icon="@drawable/chatx"
+        android:icon="@drawable/chat0"
         app:cnb_iconColor="#000000"/>
     <item
          android:id="@+id/profile"
         android:title="PROFILE"
-        android:icon="@drawable/personx"
+        android:icon="@drawable/man0"
         app:cnb_iconColor="#000000"/>
 
 </menu>

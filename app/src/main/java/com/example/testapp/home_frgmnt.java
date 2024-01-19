@@ -88,14 +88,14 @@ public class home_frgmnt extends Fragment {
                 return false;
             }
         });
-        rv=(RecyclerView)view.findViewById(R.id.recView);
+        rv= view.findViewById(R.id.recView);
         rv.setLayoutManager(new LinearLayoutManager(getContext()));
 
         FirebaseRecyclerOptions<ModelRec> options =
                 new FirebaseRecyclerOptions.Builder<ModelRec>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Products"), ModelRec.class)
                         .build();
-        myadapter=new MyAdapter(options);
+        myadapter=new MyAdapter(options,this.getContext());
         rv.setAdapter(myadapter);
 //         shimmer.stopShimmerAnimation();
 //         shimmer.setVisibility(View.GONE);
@@ -108,7 +108,7 @@ public class home_frgmnt extends Fragment {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Products").orderByChild("title").startAt(text).endAt(text+"\uf8ff"), ModelRec.class)
                         .build();
 
-        myadapter=new MyAdapter(options);
+        myadapter=new MyAdapter(options,this.getContext());
         myadapter.startListening();
         rv.setAdapter(myadapter);
     }

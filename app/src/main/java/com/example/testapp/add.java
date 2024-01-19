@@ -132,7 +132,7 @@ public class add extends Fragment {
         // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_add, container, false);
         View view = inflater.inflate(R.layout.fragment_add, container, false);
-        btnadd=(Button)view.findViewById(R.id.addb);
+        btnadd= view.findViewById(id.addb);
         catagories=view.findViewById(id.drop);
         title=view.findViewById(id.textInputLayout);
         price=view.findViewById(id.textInputLayout2);
@@ -144,7 +144,7 @@ public class add extends Fragment {
         d=new Dialog(getContext());
         d.setContentView(R.layout.dialog_loading);
         pick=view.findViewById(imagepick);
-        pick.setOnClickListener(V -> getcontent.launch("image/*") );
+        pick.setOnClickListener(V -> getcontent.launch("image/*"));
         getContentLauncher = registerForActivityResult(new ActivityResultContracts.GetContent(), result -> {
             // Handle the result here
             if (result != null) {
