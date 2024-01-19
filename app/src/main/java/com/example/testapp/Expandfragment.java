@@ -45,20 +45,23 @@
 
 package com.example.testapp;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+
+import com.bumptech.glide.Glide;
+import com.makeramen.roundedimageview.RoundedImageView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Expandfragment extends Fragment {
     private TextView tv1, tv2, tv3;
-    private CircleImageView img;
+    private RoundedImageView img;
 
     public Expandfragment() {
     }
@@ -83,11 +86,31 @@ public class Expandfragment extends Fragment {
         tv3 = v.findViewById(R.id.timetxt);
         img = v.findViewById(R.id.imgview);
 
-        assert getArguments() != null;
-        tv1.setText(getArguments().getString("title"));
-        tv2.setText(getArguments().getString("price"));
-        tv3.setText(getArguments().getString("time"));
-        img.setImageURI(Uri.parse(getArguments().getString("img")));
+////        assert getArguments() != null;
+////        tv1.setText(getArguments().getString("title"));
+////        tv2.setText(getArguments().getString("price"));
+////        tv3.setText(getArguments().getString("time"));
+////        img.setImageURI(Uri.parse(getArguments().getString("img")));
+//
+//        img.setImageResource(getActivity().getIntent().getIntExtra("image",0));
+//        tv1.setText(getActivity().getIntent().getStringExtra("title"));
+//        tv2.setText(getActivity().getIntent().getStringExtra("price"));
+//        tv3.setText(getActivity().getIntent().getStringExtra("time"));
+
+        Bundle args = getArguments();
+        if (args != null) {
+            String imgUrl = args.getString("img");
+            String title = args.getString("title");
+            String price = args.getString("price");
+            String time = args.getString("time");
+
+            tv1.setText(title);
+            tv2.setText(price);
+            tv3.setText(time);
+            Glide.with(img.getContext()).load(imgUrl).into(img);
+        } else {
+            // Handle the case where arguments are not present
+        }
 
         return v;
     }

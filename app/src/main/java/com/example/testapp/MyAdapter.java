@@ -86,8 +86,6 @@
 package com.example.testapp;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -96,6 +94,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -124,13 +123,11 @@ public class MyAdapter extends FirebaseRecyclerAdapter<ModelRec, MyAdapter.MyVie
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(context, Expandfragment.class);
-                i.putExtra("img", temp.getPimage());
-                i.putExtra("title", temp.getTitle());
-                i.putExtra("price", temp.getPrice());
-                i.putExtra("time", temp.getCurrentTime());
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(i);
+                Expandfragment fragment = Expandfragment.newInstance(model.getPimage(), model.getTitle(), model.getPrice(), model.getCurrentTime());
+                ((FragmentActivity) context).getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frm_layout, fragment) // Replace with your fragment container ID
+                        .addToBackStack(null)
+                        .commit();
             }
         });
     }
