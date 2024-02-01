@@ -8,6 +8,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
     app:cardCornerRadius="16dp"
+    android:clickable="true"
     app:cardElevation="8dp"
 
     android:foreground="?android:attr/selectableItemBackground">
@@ -24,6 +25,9 @@
             android:layout_height="0dp"
             app:riv_corner_radius="10dp"
             android:scaleType="centerCrop"
+            android:elevation="10dp"
+            app:riv_border_width="1dp"
+            app:riv_border_color="@color/black"
             android:layout_marginBottom="16dp"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
