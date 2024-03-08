@@ -3,18 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    app:cardCornerRadius="10dp"
+    app:cardCornerRadius="5dp"
     android:id="@+id/card"
-    android:layout_marginTop="10dp"
-    android:layout_margin="1dp"
     android:clickable="true"
     app:cardElevation="10dp"
     app:cardBackgroundColor="#E3E7FD"
-    android:layout_height="100dp">
+    android:layout_margin="2dp"
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="400dp"
+        android:padding="2dp"
+        android:layout_height="100dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img1"
@@ -54,7 +54,7 @@
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:text="Marigold Biscuit"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +70,7 @@
             android:layout_marginBottom="20dp"
             android:text="Price : 20rs"
             android:textColor="@color/black"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.063"
@@ -97,7 +97,7 @@
             android:layout_height="wrap_content"
             android:text="time : 12:20"
             android:textColor="@color/black"
-            android:textSize="16dp"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.948"

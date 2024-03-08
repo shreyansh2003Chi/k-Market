@@ -20,4 +20,14 @@
     <color name="chat_20">#335B37B7</color>
 
     <color name="shimer_effect">#dddddd</color>
+
+    <color name="gradiant0A">#5f2c82</color>
+    <color name="gradiant0B">#49a09d</color>
+
+    <color name="gradiant1A">#283048</color>
+    <color name="gradiant1B">#859398</color>
+
+    <color name="gradiant2A">#1f4037</color>
+    <color name="gradiant2B">#99f2c8</color>
+
 </resources>

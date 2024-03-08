@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="65dp"
         app:cnb_radius="10dp"
-        app:circularflow_radiusInDP="30dp"
         app:cnb_iconSize="25dp"
         android:background="#EFEEEE"
         app:cnb_menuResource="@menu/tab_manu"
